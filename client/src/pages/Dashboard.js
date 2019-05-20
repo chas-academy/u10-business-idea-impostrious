@@ -20,44 +20,36 @@ class Dashboard extends Component {
     return (
       <div className="d-flex justify-content-center pt-2">
         <div
-          className="border border-info p-5"
-          style={{ marginBottom: "3rem" }}
+          className="border border-info px-5 pt-5"
+          style={{ marginBottom: "8rem", width: "75vh" }}
         >
           <div>
-            <div className="row">
-              <div className="text-center">
-                <h1>Welcome!</h1>
-                <h4>
-                  <b>Hey there,</b> {user.name.split(" ")[0]}
-                  <p>You are logged into Feedplx! 👏</p>
-                </h4>
-                <div />
-                <nav className="d-flex justify-content-around pt-5">
-                  <Link
-                    to="/new-session"
-                    role="button"
-                    className="btn btn-outline-primary btn"
-                  >
-                    New Session
-                  </Link>
+            <div className="text-center">
+              <h1>Welcome!</h1>
+              <h4>
+                <b>Hey there,</b> {user.name.split(" ")[0]}
+                <p>
+                  You are logged! <span role="img"> 👏</span>
+                </p>
+              </h4>
+              <div />
+              <nav className="d-flex justify-content-around pb-5">
+                <Link
+                  to="/new-session"
+                  role="button"
+                  className="btn btn-outline-primary btn"
+                >
+                  New Session
+                </Link>
 
-                  <Link
-                    to="/my-sessions"
-                    role="button"
-                    className="btn btn-outline-secondary"
-                  >
-                    My Sessions
-                  </Link>
-
-                  <button
-                    type="button"
-                    onClick={this.onLogoutClick}
-                    className="btn btn-outline-danger"
-                  >
-                    Logout
-                  </button>
-                </nav>
-              </div>
+                <Link
+                  to="/my-sessions"
+                  role="button"
+                  className="btn btn-outline-secondary ml-2"
+                >
+                  My Sessions
+                </Link>
+              </nav>
             </div>
           </div>
         </div>

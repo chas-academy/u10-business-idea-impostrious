@@ -6,7 +6,7 @@ import { config } from "dotenv";
 import cors from "cors";
 
 // room imports
-import RoomData from "./models/RoomData";
+import RoomData from "./models/roomData";
 
 import mysession from "./routes/api/mysession";
 import users from "./routes/api/users";
@@ -67,7 +67,7 @@ app.use(function(err, req, res, next) {
   res.status(err.statusCode).send(err.message); // All HTTP requests must have a response, so let's send back an error with its status code and message
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5005;
 
 const server = app.listen(port, () =>
   console.log(`Server up and running on port ${port} test!`)
