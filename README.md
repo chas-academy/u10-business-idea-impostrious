@@ -1,8 +1,6 @@
 # Quick start
 
-1. `cp .env.example .env`
-   `cp client/deploy/.env.dist .env`
-   `cp server/deploy/.env.dist .env`
+1. `cp .env.example .env && cp client/deploy/.env.dist client/deploy/.env && cp server/deploy/.env.dist server/deploy/.env`
 2. `cd client && npm i`
 3. `cd ../server && npm i`
 4. In the root directory run: `docker-compose up`
